@@ -16,6 +16,15 @@ class Dinosaur:
     def say_name(self):
         print('my name is ' + self.name)
     
+    def say_name_and_countdown(self, n: int):
+        print('my name is ' + self.name)
+        def countdown(n):
+            if n < 0:
+                return
+            print(n)
+            countdown(n - 1)
+        countdown(n)
+    
     @classmethod
     def say_kingdom(cls):
         print('Dinosaurs are in kingdom ' + cls.kingdom)
@@ -45,3 +54,4 @@ Dinosaur.say_status()
 print("******")
 d1.say_name()
 d2.say_name()
+d1.say_name_and_countdown(5)
